@@ -1,0 +1,169 @@
+one of the common scenario in programming is making decisions.
+the program needs to compare values and execute code based upon some logical outcome
+here comes the conditional logic.
+in python conditinal logics are handled by "if" statement
+
+===========program conition 1======
+
+def main():
+    x, y = 10, 100
+
+    # conditional flow uses if, elif, else
+    if (x < y):
+      st ="x is less than y"
+    print(st)
+
+if __name__ == "__main__":
+    main()
+
+
+output : x is less than y
+
+=========program condition 2 =============
+
+def main():
+    x, y = 1000, 100
+
+    # conditional flow uses if, elif, else
+    if (x < y):
+      st ="x is less than y"
+    print(st)
+
+if __name__ == "__main__":
+    main()
+
+#changed the value of x to 1000 and now execute the program and it errors out
+
+error:
+=========
+Traceback (most recent call last):
+ionals_start.py", line 17, in <module>
+    main()
+  File "c:/Users/saleems/Documents/Learning path/Python_Coding/Exercise Files/Ch2/conditionals_start.py", line 12, in main
+    print(st)
+UnboundLocalError: local variable 'st' referenced before assignment
+
+=========program condition 3 - include else part=============
+
+def main():
+    x, y = 1000, 100
+
+    # conditional flow uses if, elif, else
+    if (x < y):
+      st ="x is less than y"
+    else:
+      st="x is greater than y"
+    print(st)
+    # conditional statements let you use "a if C else b"
+
+
+if __name__ == "__main__":
+    main()
+
+==========
+output: x is greater than y
+
+
+=========program condition 3 - include else part but equal the values=============
+
+def main():
+    x, y = 100, 100
+
+    # conditional flow uses if, elif, else
+    if (x < y):
+      st ="x is less than y"
+    else:
+      st="x is greater than y"
+    print(st)
+    # conditional statements let you use "a if C else b"
+
+
+if __name__ == "__main__":
+    main()
+
+# make both the values of x and y equal that is 100 and hence we get the result which is wrong
+so, what's happening here since the if part doesn't meet the condition then the program blindly executes the else part
+==============output 
+x is greater than y
+
+===============program condition 4 - to fix the above problem==============
+def main():
+    x, y = 100, 100
+
+    # conditional flow uses if, elif, else
+    if (x < y):
+      st ="x is less than y"
+    elif (x==y):
+      st = "x is the same as y"
+    else:
+      st="x is greater than y"
+    print(st)
+    # conditional statements let you use "a if C else b"
+
+
+if __name__ == "__main__":
+    main()
+
+
+# use elif() to solve this problem --else if
+
+
+=======output===========
+x is the same as y
+
+==============================================
+Other programming lanuages have switch case. So, python did not have the switch case to make it simple instead it uses if(): elif(): and else: block.
+
+additonal way to write the conditional statement.
+common if else construct in one line:
+javascript has someting similar like ternary operations
+
+===============program writing conditional statement in one line when we do not have nore than two conditions to check====================
+
+def main():
+    x, y = 100, 1000
+
+    # conditional flow uses if, elif, else
+    if (x < y):
+      st ="x is less than y"
+    elif (x==y):
+      st = "x is the same as y"
+    else:
+      st="x is greater than y"
+    print(st)
+    # conditional statements let you use "a if C else b"
+    st= "x is less than y" if(x<y) else "x is greater or the same as y"
+    print(st)
+
+if __name__ == "__main__":
+    main()
+
+==========
+output
+========
+x is less than y
+x is less than y
+
+
+
+===============cathting errors===================
+
+def main():
+    x, y = 10, 100
+
+    # conditional flow uses if, elif, else
+if (x < y): # I missed this indentation and received the following error in the program see below
+       st ="x is less than y"
+    print(st)
+    # conditional statements let you use "a if C else b"
+
+
+if __name__ == "__main__":
+    main()
+
+============ error============
+ionals_start.py", line 10
+    if (x < y):
+              ^
+IndentationError: unindent does not match any outer indentation level
+==========

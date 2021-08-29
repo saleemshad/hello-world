@@ -1,0 +1,88 @@
+
+The code blocks that iw divided into smaller blocks is called function.
+Most applications use the concept of functions, even the python
+
+How to define a function?
+
+functions are define by "def" keyword and function_name and the "()" and ":"
+":" - colon indicates the start of the function scope block
+next line of the function should be indented
+syntax: def functions_name():
+
+example: def signin():
+
+Comparion: other programming languages use "{ }" to indicate the scope of the function that is not the case with the  python. python uses ":" and indentation
+
++============Program +==================================
+def func1():
+    print("I am a funciton")
+
+func1()  # this line prints "I am a funciton"
+print(func1()) # this line prints "I am a funciton" since we are calling func1() inside print.
+               # again print(func1()) returns the vlaue "None" as there no value passed to the print
+print(func1) # this returns output - <function func1 at 0x0000023EB3C7D1E0>
+
+====================
+
+output:
+I am a funciton  - the function is being called directly
+I am a funciton  - function is being called inside the print, and print is also executed but print does not have anything to prints it returns none.
+None
+<function func1 at 0x0000023EB3C7D1E0>   -- we are prints the value of function definition itself which comes out to be this value.
+====================
+This shows that function themselves are objects that can be passed around to other peices of pythin code
+
+
+=============+ program 2 function that takes arguments+==================
+def func2(arg1, arg2):
+    print(arg1, " " , arg2)
+
+func2(10,20)
+print(func2(10,20))
+
+============
+output
+10   20
+10   20
+None
+
+============+ program function that return a value+=================
+def cube(x):
+    return(x * x * x)
+print(cube(3))
+
+output : 27
+
+============# function with default value for an argument =========
+def power(num,x=1):
+    result=1
+    for i in range(x):
+        result = result * num
+    return result
+print(power(2))
+print(power(2,3))
+print(power(x=3, num=2)) # we can decalred named parameters in the function so, It doesn't matter the position or order of aruments that you placed in the function since we are passing the name arguments
+retun 8 as output
+Python interpreter figures out
+
+= output:
+2
+8
+===========
+
+======= #function with variable number of arguments #===============
+def multi_add(*args):  # Star character means I can pass multiple number of arguments
+    result = 0
+    for x in args:
+        result = result + x
+    return result
+
+print(multi_add(4, 5, 10, 4))  #output 23
+print(multi_add(10, 4, 5, 10, 4))  #output 33
+
+
+Note: you can combine a varibale/multiple argument list with a set of formal arguments, but keep in mind that varible argument list always has to be a last parameter
+
+for example:
+
+def multi_add(arg1, *args):

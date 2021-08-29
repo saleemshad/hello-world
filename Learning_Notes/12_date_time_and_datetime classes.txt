@@ -1,0 +1,50 @@
+We are going to take a look at the rich libarary of the predfined code that comes with python in order to the biuld functionality into python apps.
+ and in this lesseon we are going to look at date and times.
+In order to use the rich functionality of libraries which python provides we need to tell python where to go get it from.
+To do that we need to use "import" statement
+======
+from datetime import date
+from datetime import time
+from datetime import datetime
+==============
+
+So we are going to tell the python interpreter that from "datetime" standard module that comes with stabdard library. I want to import the date, time, and datetime classes.
+
+These are predefined pieces of functionality in the python libarary that let me manipulate dates and times. So, I don't have to write code. I can just just it by importng the modeule in the class.
+
+to get the today's date we can use
+today = date.today()
+
+to get the separate components of date then
+we can use 
+today.day
+today.month,
+today.year
+
+The date object also provides some useful properties that I can use in other more advanced features of an app.
+
+I can retrieve the week day number and that starts off at zero for Monday and goes up to six on Sunday
+
+program
+=========
+today = date.today()
+ print ("today's date is ", today)
+
+=========program indivial compnents of date
+print("date components :" today.day, today.month,today.year)
+
+weekday number
+print("today weekday # is", today.weekday())
+
+refer the python program it has all the notes 
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,168 @@
+Like javascript and other programming languages.
+python gives us the option to running code that is either procedural or object-oriented way
+we can use classes in python.
+classes are a great way to use encapculating functionality
+can be kept together and passed around as a complete module for use in other project
+
+classes are defined using the class keyword and they are given a name.
+And if this class was based on superclass that I was inheriting from then I would put the name of that other class. #here inside the paranthesis
+
+Since our first class is a base class so, we are not putting anything in the method
+
+class myclass():
+    def method(self):
+        print("my class method1")
+
+    def method2(self, someString):
+        print("my class method2 " + someString) #here
+
+=
+================
+inside the class we can define functions or object-oriented methodology called methods and they are part of this class
+So, I need to indent my code and use def keywork to define it
+
+Self arguemnet: def method1(self)
+
+usaually the first arguement of any of the methods of the class is the "self' argument and the "self" argument refers to the object itself. it's kind of like (this) keyword in javascript.
+
+
+So, inside this method "def method1(self)": "self" will refer to this particular instance of the object that's being operated on
+
+================
+In this main function we will instantiate the class by writing C equals myclass()
+
+===========program for classes============
+# Example file for working with classes
+#
+class myclass():
+    def method1(self):
+        print("my class method1")
+
+    def method2(self, someString):
+        print("my class method2 " + someString)
+
+def main():
+   c = myclass()
+   c.method1()
+   c.method2("This is a string")
+
+ 
+if __name__ == "__main__":
+    main()
+=============
+output:
+my class method1
+my class method2 This is a string
+====================
+
+=======Look at another feature of Object-Oreinted programming ===============
+Lets create another class called and inherit myclass inside it
+
+
+#
+# Example file for working with classes
+#
+class myclass():
+    def method1(self):
+        print("my class method1")
+
+    def method2(self, someString):
+        print("my class method2 " + someString)
+class anotherClass(myclass):
+    def method1(self):
+        print("another class method1")
+
+    def method2(self, someString):
+        print("another class method2 ")
+
+def main():
+   c = myclass()
+   c.method1()
+   c.method2("This is a string")
+   c2=anotherClass()
+   c2.method1()
+  
+if __name__ == "__main__":
+    main()
+================
+Output:
+my class method1
+my class method2 This is a string
+another class method1
+=============
+
+#
+# Example file for working with classes
+#
+class myclass():
+    def method1(self):
+        print("my class method1")
+
+    def method2(self, someString):
+        print("my class method2 " + someString)
+class anotherClass(myclass):
+    def method1(self):
+        myclass.method1(self)  #--- call inherited method here from superclass
+        print("another class method1")
+
+    def method2(self, someString):
+        print("another class method2 ")
+
+def main():
+   c = myclass()
+   c.method1()
+   c.method2("This is a string")
+   c2=anotherClass()
+   c2.method1()
+   # First I'm going to call the inherited method from the superclass
+   #which is method1() in myClass()
+   # to do that write this code in anotherClass() definition
+   #myclass.method1(self)
+if __name__ == "__main__":
+    main()
+===========
+output:
+my class method1
+my class method2 This is a string
+my class method1  -- we are getting this output here becuase in anotherclass two we are invoking the myClass() method1() as code "myclass.method1(self)"
+another class method1
+
+================program pass value in anotherClass method2() but it does not we that value becuase there is no argument defined in the method2() of anotherClass()===========
+ 
+#
+# Example file for working with classes
+#
+class myclass():
+    def method1(self):
+        print("my class method1")
+
+    def method2(self, someString):
+        print("my class method2 " + someString)
+class anotherClass(myclass):
+    def method1(self):
+        myclass.method1(self)
+        print("another class method1")
+
+    def method2(self, someString):
+        print("another class method2 ")
+
+def main():
+   c = myclass()
+   c.method1()
+   c.method2("This is a string")
+   c2=anotherClass()
+   c2.method1()
+   c2.method2("This is a string") # we are passing sting but method2() is not defined to take arguments so, it just gives the output another class method2
+# even though we are passing the argument, it is not being used and not being printed in the output. Since we are not calling the inherited method2() the argument is not being printed in the myclass code
+   
+
+ 
+if __name__ == "__main__":
+    main()
+===================
+my class method1
+my class method2 This is a string
+my class method1
+another class method1
+another class method2
+==========================

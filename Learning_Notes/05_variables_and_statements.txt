@@ -1,0 +1,88 @@
+Variables and expressions notes
+
+f = 0
+print(f)
+
+f= "abc" 
+print(f)
+
+output
+0
+abc
+
+So, Even if the variable is already declared you can re-declare it.
+
+Lets combined string and int
+
+print("this is string" + 123)
+
+I'm getting the following error.
+Traceback (most recent call last):
+  File "c:/Users/saleem/Documents/Learning path/Python_Coding/Exercise Files/Ch2/variables_start.py", line 16, in <module>
+    print("this is string" + 123)
+TypeError: can only concatenate str (not "int") to str
+
+
+================================
+program
+
+f= 0
+
+def someFunction():
+    f="def"
+    print(f)
+
+someFunction()
+print(f)
+
+==============
+output
+def
+0
+========
+
+in this case where we have declared variable "f" outside a function and same variable "f " inside a function python interpreter treats it differently becuase function gets its own local copy whatever the varibales we declare inside the function, that is the reason why it is treated separately.
+
+To make variables f treated same as we delared outside the function we need to tell the python interpreter that the value of f is global
+
+====================
+#progam
+f= 0
+def someFunction():
+    global f # we are making local variable global by declaring this
+    f="def"
+    print(f)
+
+someFunction()
+print(f)
+
+========
+output
+def
+def
+===========================
+
+We can also delete the variable that we declared in realtime in the program.
+
+program
+================
+def someFunction():
+    global f 
+    f="def"
+    print(f)
+
+someFunction()
+print(f)
+
+del f
+print(f)
+
+===================
+output
+def
+def
+
+Traceback (most recent call last):
+  File "c:/Users/saleem/Documents/Learning path/Python_Coding/Exercise Files/Ch2/variables_start.py", line 30, in <module>
+    print(f)
+NameError: name 'f' is not defined

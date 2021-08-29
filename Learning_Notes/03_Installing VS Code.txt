@@ -1,0 +1,17 @@
+after installing VS code
+Install python extension
+
+Set few preferences and settings that will make python code easier to use.
+
+Open exeercises folder in VS Code with Open Folder option.
+Bottom left you can see "Python 3.7.xx"
+
+Open seetings
+
+File > Preferences > settings
+or Shortcut Cntrl + ,
+
+Search for preference name "executeinfiledir" and keep this setting checked
+
+Debug  icon --> click "create a launch.json file"  -- how to run python programs for debugging
+you will be prompted type of ebn select 'python file' leave it as it is

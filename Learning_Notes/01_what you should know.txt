@@ -1,0 +1,15 @@
+
+There are some concepts that you should already be faimiliar with.
+
+You should be faimilar with 
+
+1. Basic principles such as
+Variables, functions and statements
+
+if you don't now 
+	then you can look at the courses on Programming fiundations : fundamentals or javascript essesntial training.
+
+2. Programming tools:
+ you should also know some programming tools like IDES or editors
+  
+if you don't know then look at vS code for web developers

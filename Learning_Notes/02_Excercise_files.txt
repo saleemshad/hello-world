@@ -1,0 +1,4 @@
+The excercise files have _start and _finished version of program.
+
+_start  is the starting point of coding
+_finished in the completed version of the program

@@ -1,0 +1,19 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Python: Current File",
+            "type": "python",
+            "request": "launch",
+            "program": "${file}",
+            "console": "integratedTerminal",
+            "cwd": "${fileDirname}", // optional :current working directory this line tells the VS code to set the working directory as the current python file is there
+            "stopOnEntry": true // optional : this will tell debugger to automatically pause when the python program starts up even though there no breakpoints
+            // refer link for setting debugging config for python
+            // https://code.visualstudio.com/docs/python/debugging
+        }
+    ]
+}

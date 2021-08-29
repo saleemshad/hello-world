@@ -1,0 +1,6 @@
+A common and somewhat frustrating scenario in dates and times involves peforming mathematical operations on dates and times.
+
+You might want to calculate a date in the future or the past relative to that date.
+We can use the time delta class in python.
+"timedelta" 
+It's not a date or time. It's span of time. We can use this class to perform timebased mathmatical operations

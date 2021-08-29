@@ -1,0 +1,19 @@
+oen of ythe most powerful features of python is a large number of libarary modules with a pre-built code that you can use in your programs and the standard python installation contains quite a few of these modules. 
+
+Lets take look a at the example of a code module that yo don't have to write yourself
+open module_start.py
+
+Lets import math modeule.
+contains function to calculate math functions
+
+use function sqrt()
+when you type math. then the intellisense shows you all the functions and constants that are available in a math modeule.
+in that cube symbol means a function and yellow two side arrow mean a constant.
+
+Modeules can define functions, classes, contants
+
+
+
+
+we other lesson we are going to look at some great modeules.
+calculating dates and times and working with files and even processing internet  based data like HTML, XML and JSON

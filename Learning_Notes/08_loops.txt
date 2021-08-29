@@ -1,0 +1,111 @@
+repeating code over and over again is a common scenario in the program which is called loop
+python provides a couple of ways of doing that.
+remember the syntx of while loop
+While (condition):
+  print()
+  increment
+
+syntax of for loop:
+for x in range(5.6):
+
+for x in array:
+
+========program 1 while loop=========
+
+def main():
+  x = 0
+ while (x<5):
+      print(x)
+      x = x+1
+
+if __name__ == "__main__":
+  main()
+
+=========output=====
+0
+1
+2
+3
+4
+
+======program 2 for loop =====================
+def main():
+  x = 0
+
+  for x in range(5,10):
+      print(x)
+
+if __name__ == "__main__":
+  main()
+
+====output
+5
+6
+7
+8
+9
+
+
+# ============program use a for loop over a collection ==============
+def main():
+  x = 0
+ 
+ days=["Mon","Tue", "Thu", "Fri", "Sat", "Sun"]
+   for d in days:
+     print (d)
+
+if __name__ == "__main__":
+  main()
+
+=====
+output
+Mon
+Tue
+Thu
+Fri
+Sat
+Sun
+
+#using the enumerate() function to get index 
+  days=["Mon","Tue", "Thu", "Fri", "Sat", "Sun"]
+  for i,d in enumerate(days):
+    print (i, d)
+
+=========
+output
+
+0 Mon
+1 Tue
+2 Thu
+3 Fri
+4 Sat
+5 Sun
+
+
+======program using break statment========
+# use the break and continue statements
+  for x in range(5,10):
+    if (x==7): break
+    
+    print(x)
+
+=========
+output -- since it has break at 7
+=======
+5
+6
+
+
+program using continue statement
+==================
+# use the break and continue statements
+  for x in range(5,10):
+    
+    if(x%2 ==0) : continue
+    print(x)
+========
+output -- odd numbers only
+=======
+5
+7
+9

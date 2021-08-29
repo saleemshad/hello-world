@@ -1,0 +1,16 @@
+Python Notes Summary:
+
+it has easy to learn structure
+Corss platform: It can run on multiple operating systems both in client and in the Cloud.
+Has lots of libraries to work on
+Has lots a large ecosystem of tools
+
+What's covered in this course:
+
+installtions
+basic - variables, functions, classes, etc.
+first program
+high level datat types
+ dates etc.
+adavacned featues
+processing applications with HTML, XML etc.
